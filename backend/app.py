@@ -21,7 +21,7 @@ CORS(app, resources={r"/api/*": {"origins": "*"}})
 def index():
     return send_from_directory(FRONTEND_DIR, "index.html")
 
-
+# dummy comment
 @app.get("/api/health")
 def health():
     try:
