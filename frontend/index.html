@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MREX Vendors</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>MREX Vendors</h1>
+    <nav>
+      <button class="tab active" data-tab="tables-view">Tables</button>
+      <button class="tab" data-tab="materials-view">Material IDs</button>
+    </nav>
+    <span id="status" class="status">checking…</span>
+  </header>
+
+  <main id="tables-view" class="view">
+    <aside>
+      <h2>Tables</h2>
+      <ul id="tables"></ul>
+    </aside>
+    <section>
+      <div class="toolbar">
+        <h2 id="title">Select a table</h2>
+        <div>
+          <button id="prev">Prev</button>
+          <span id="range"></span>
+          <button id="next">Next</button>
+        </div>
+      </div>
+      <div class="scroll"><table id="grid"></table></div>
+    </section>
+  </main>
+
+  <main id="materials-view" class="view" hidden>
+    <section>
+      <div class="toolbar">
+        <div>
+          <input id="m-q" type="search" placeholder="Search vendor or item…" />
+          <select id="m-status">
+            <option value="all">All</option>
+            <option value="unmapped">Unmapped</option>
+            <option value="mapped">Mapped</option>
+          </select>
+        </div>
+        <div>
+          <button id="m-prev">Prev</button>
+          <span id="m-range"></span>
+          <button id="m-next">Next</button>
+          <button id="m-save" class="primary">Update</button>
+        </div>
+      </div>
+      <div id="m-msg" class="msg"></div>
+      <div class="scroll"><table id="m-grid"></table></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
